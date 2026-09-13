@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trazzo — Catálogo</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="sitio marca">
+      <p class="marca__titulo">Tra<span>zzo</span></p>
+      <nav aria-label="Navegación principal">
+        <ul class="nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="autor.html">Quién mantiene el sitio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="sitio contenido">
+    <p class="etiqueta">CATÁLOGO</p>
+    <h1>Catálogo de dibujos</h1>
+    <p class="intro">
+      Elegí una categoría para ver los dibujos correspondientes. La
+      selección funciona solo con HTML y CSS.
+    </p>
+
+    <!--
+      Mecanismo CSS-only para elegir categoría (sin JavaScript):
+      los inputs type="radio" son hermanos del contenedor .galerias.
+      El CSS usa el combinador ~ para mostrar la galería cuyo id
+      coincide con el radio marcado. El primero viene "checked" para
+      que se vea una categoría por defecto al cargar la página.
+    -->
+    <input type="radio" name="categoria" id="cat-caricaturas" checked>
+    <input type="radio" name="categoria" id="cat-paisajes">
+    <input type="radio" name="categoria" id="cat-anime">
+
+    <fieldset class="selector-categoria">
+      <legend>Categoría</legend>
+      <label for="cat-caricaturas">Caricaturas</label>
+      <label for="cat-paisajes">Paisajes</label>
+      <label for="cat-anime">Animé</label>
+    </fieldset>
+
+    <div class="galerias">
+
+      <section class="galeria" id="galeria-caricaturas" aria-label="Caricaturas">
+        <figure class="ficha">
+          <div class="marco"><img src="imagenes/Vivaldi_caricature.png" alt="Caricatura del compositor Vivaldi"></div>
+          <figcaption>Caricatura de Vivaldi<br><small>Wikimedia Commons, dominio público</small></figcaption>
+        </figure>
+        <figure class="ficha">
+          <div class="marco"><img src="imagenes/Achille_Denis_caricature.jpg" alt="Caricatura de Achille Denis"></div>
+          <figcaption>Caricatura de Achille Denis<br><small>Wikimedia Commons, dominio público</small></figcaption>
+        </figure>
+      </section>
+
+      <section class="galeria" id="galeria-paisajes" aria-label="Paisajes">
+        <figure class="ficha">
+          <div class="marco"><img src="imagenes/Drawing,_Landscape,_July_1865_(CH_18201019).jpg" alt="Dibujo de un paisaje, julio de 1865"></div>
+          <figcaption>Paisaje, 1865<br><small>Wikimedia Commons, dominio público</small></figcaption>
+        </figure>
+        <figure class="ficha">
+          <div class="marco"><img src="imagenes/Drawing,_Mountainous_Landscape,_May_1865_(CH_18197351).jpg" alt="Dibujo de un paisaje montañoso, mayo de 1865"></div>
+          <figcaption>Paisaje montañoso, 1865<br><small>Wikimedia Commons, dominio público</small></figcaption>
+        </figure>
+      </section>
+
+      <section class="galeria" id="galeria-anime" aria-label="Animé">
+        <figure class="ficha">
+          <div class="marco"><img src="imagenes/Wikipe-tan_in_Different_Anime_Styles.png" alt="Personaje Wikipe-tan dibujado en distintos estilos animé"></div>
+          <figcaption>Wikipe-tan en varios estilos<br><small>Wikimedia Commons, CC BY-SA 4.0</small></figcaption>
+        </figure>
+        <figure class="ficha">
+          <div class="marco"><img src="imagenes/Wikipe-tan_full_length.png" alt="Personaje Wikipe-tan de cuerpo entero, estilo animé"></div>
+          <figcaption>Wikipe-tan<br><small>Wikimedia Commons, CC BY-SA 2.5</small></figcaption>
+        </figure>
+      </section>
+
+    </div>
+
+    <section class="seccion">
+      <div class="seccion__encabezado">
+        <p class="etiqueta">SUMÁ TU DIBUJO</p>
+        <h1>Subí un dibujo</h1>
+      </div>
+      <p class="intro">
+        Elegí un archivo PNG o JPG desde tu compu.
+      </p>
+      <form class="formulario" action="#" method="post" enctype="multipart/form-data">
+        <div class="campo">
+          <label for="dibujo">Archivo del dibujo</label>
+          <input type="file" id="dibujo" name="dibujo" accept="image/png, image/jpeg">
+        </div>
+        <button type="submit" class="boton">Subir dibujo</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="sitio">
+      <p>Sitio estático hecho con HTML y CSS · imágenes vía Wikimedia Commons</p>
+    </div>
+  </footer>
+
+</body>
+</html>

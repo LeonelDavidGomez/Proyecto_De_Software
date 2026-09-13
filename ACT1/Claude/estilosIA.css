@@ -1,0 +1,425 @@
+/* ============================================================
+   estilosIA.css
+   Sitio: Cuaderno de Leonel — galería de dibujos
+   Colores y estilos preferidos (requisito punto 2):
+     --crema    #F5F1E6  fondo general
+     --navy     #1D2B3A  texto principal / títulos
+     --terra    #E2725B  acento (botones, hover, detalles)
+     --gris     #6B7280  texto secundario
+     --tarjeta  #FFFFFF  fondo de tarjetas
+     --borde    #E7E0CF  líneas y bordes suaves
+   Tipografías: "Poppins" para títulos, "Inter" para el cuerpo.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --crema: #F5F1E6;
+  --navy: #1D2B3A;
+  --terra: #E2725B;
+  --terra-osc: #C85B44;
+  --gris: #6B7280;
+  --tarjeta: #FFFFFF;
+  --borde: #E7E0CF;
+  --font-title: "Poppins", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--crema);
+  color: var(--navy);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a { color: var(--navy); text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.sitio {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ---------- Encabezado ---------- */
+
+.encabezado {
+  background: var(--crema);
+  padding: 26px 0;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.marca__titulo {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.marca__titulo span { color: var(--terra); }
+
+.nav {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--navy);
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a[aria-current="page"],
+.nav a:hover,
+.nav a:focus-visible {
+  color: var(--terra);
+  border-bottom-color: var(--terra);
+}
+
+/* ---------- Contenido general ---------- */
+
+.contenido { padding-bottom: 80px; }
+
+.contenido h1 {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+}
+
+.intro { max-width: 60ch; color: var(--navy); }
+
+.etiqueta {
+  display: inline-block;
+  color: var(--terra);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+/* ---------- Hero (portada) ---------- */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 40px 0 60px;
+}
+
+.hero__texto h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+  line-height: 1.15;
+}
+
+.hero__texto p { max-width: 46ch; color: var(--gris); font-size: 1.05rem; }
+
+.hero__ilustracion {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero__ilustracion { order: -1; max-width: 280px; margin: 0 auto; }
+}
+
+/* ---------- Botón ---------- */
+
+.boton {
+  display: inline-block;
+  background: var(--terra);
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.boton:hover, .boton:focus-visible {
+  background: var(--terra-osc);
+  color: #fff;
+}
+
+/* ---------- Sección catálogo / accesos ---------- */
+
+.seccion {
+  padding-top: 40px;
+}
+
+.seccion__encabezado {
+  text-align: left;
+  margin-bottom: 26px;
+}
+
+.accesos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.acceso {
+  display: block;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(29, 43, 58, 0.06);
+}
+
+.acceso:hover, .acceso:focus-visible {
+  border-color: var(--terra);
+}
+
+.acceso strong {
+  display: block;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.acceso span { color: var(--gris); font-size: 0.92rem; }
+
+/* ---------- Selector de categoría (catálogo, 100% CSS) ---------- */
+
+.selector-categoria {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0 34px;
+  border: none;
+  padding: 0;
+}
+
+.selector-categoria legend {
+  width: 100%;
+  font-weight: 600;
+  padding: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--gris);
+}
+
+.selector-categoria input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.selector-categoria label {
+  cursor: pointer;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+}
+
+.selector-categoria input[type="radio"]:checked + label {
+  background: var(--terra);
+  border-color: var(--terra);
+  color: #fff;
+}
+
+.selector-categoria input[type="radio"]:focus-visible + label {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.galerias { position: relative; }
+.galeria { display: none; }
+
+#cat-caricaturas:checked ~ .galerias #galeria-caricaturas,
+#cat-paisajes:checked   ~ .galerias #galeria-paisajes,
+#cat-anime:checked      ~ .galerias #galeria-anime {
+  display: grid;
+}
+
+.galeria {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Ficha: mismo borde y relleno en todas las imágenes (requisito punto 4) */
+.ficha {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(29, 43, 58, 0.06);
+}
+
+.ficha .marco {
+  border: 4px solid var(--navy);
+  background: #FBF6E9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ficha img {
+  border-radius: 4px;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.ficha figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gris);
+}
+
+.ficha figcaption small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--gris);
+  opacity: 0.75;
+}
+
+/* ---------- Página "quién mantiene el sitio" ---------- */
+
+.perfil {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+.perfil__ficha {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 26px;
+  min-width: 220px;
+  box-shadow: 0 8px 20px rgba(29, 43, 58, 0.06);
+  text-align: center;
+}
+
+.perfil__ficha .avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: var(--terra);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0 auto 14px;
+}
+
+.perfil__ficha .nombre {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.perfil__ficha .rol {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 14px;
+  background: var(--crema);
+  color: var(--navy);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.preferencias {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 22px;
+  margin-top: 30px;
+}
+
+.preferencias h2 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+}
+
+.muestras-color { display: flex; gap: 10px; margin-top: 12px; }
+
+.muestras-color span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--borde);
+  display: inline-block;
+}
+
+/* ---------- Formulario de contacto ---------- */
+
+.formulario {
+  max-width: 520px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(29, 43, 58, 0.06);
+  margin-top: 14px;
+}
+
+.campo { display: flex; flex-direction: column; margin-bottom: 18px; }
+.campo label { font-weight: 600; margin-bottom: 6px; font-size: 0.94rem; }
+
+.campo input, .campo textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 11px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--crema);
+  color: var(--navy);
+}
+
+.campo textarea { resize: vertical; min-height: 120px; }
+
+.campo input:focus-visible, .campo textarea:focus-visible {
+  outline: 2px solid var(--terra);
+  outline-offset: 1px;
+}
+
+/* ---------- Pie de página ---------- */
+
+.pie {
+  border-top: 1px solid var(--borde);
+  padding: 22px 0;
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+/* ---------- Responsivo (punto 5) ---------- */
+
+@media (max-width: 640px) {
+  .nav { gap: 16px; flex-wrap: wrap; }
+  .perfil { flex-direction: column; align-items: stretch; }
+  .formulario { width: 100%; }
+}

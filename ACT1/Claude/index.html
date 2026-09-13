@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trazzo — Inicio</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="sitio marca">
+      <p class="marca__titulo">Tra<span>zzo</span></p>
+      <nav aria-label="Navegación principal">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="autor.html">Quién mantiene el sitio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="sitio contenido">
+
+    <section class="hero">
+      <div class="hero__texto">
+        <p class="etiqueta">MI GALERÍA DE DIBUJOS</p>
+        <h1>Dibujos que cobran vida en el papel.</h1>
+        <p class="intro">
+          Una colección de caricaturas, paisajes y dibujos estilo animé.
+          Elegí una categoría y descubrí las ilustraciones, en una
+          página siempre estática, sin scripts.
+        </p>
+        <a href="catalogo.html" class="boton">Explorar dibujos</a>
+      </div>
+
+      <div class="hero__ilustracion" aria-hidden="true">
+        <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="140" cy="140" r="120" fill="#FBF6E9"/>
+          <circle cx="118" cy="150" r="78" fill="#E2725B"/>
+          <circle cx="188" cy="200" r="42" fill="#FBF6E9" stroke="#1D2B3A" stroke-width="6"/>
+          <line x1="150" y1="130" x2="200" y2="80" stroke="#1D2B3A" stroke-width="8" stroke-linecap="round"/>
+          <rect x="192" y="66" width="14" height="30" rx="4" transform="rotate(45 199 81)" fill="#1D2B3A"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="seccion__encabezado">
+        <p class="etiqueta">CATÁLOGO</p>
+        <h1>¿Qué querés ver?</h1>
+      </div>
+
+      <div class="accesos">
+        <a class="acceso" href="catalogo.html">
+          <strong>Caricaturas</strong>
+          <span>Rasgos exagerados, expresiones simples.</span>
+        </a>
+        <a class="acceso" href="catalogo.html">
+          <strong>Paisajes</strong>
+          <span>Montañas, lagos y horizontes tranquilos.</span>
+        </a>
+        <a class="acceso" href="catalogo.html">
+          <strong>Animé</strong>
+          <span>Ojos grandes, líneas prolijas, estilo japonés.</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="sitio">
+      <p>Sitio estático hecho con HTML y CSS · imágenes vía Wikimedia Commons</p>
+    </div>
+  </footer>
+
+</body>
+</html>
