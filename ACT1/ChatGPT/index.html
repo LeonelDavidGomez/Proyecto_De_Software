@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Dibujos</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+<header class="encabezado">
+    <nav class="navbar" aria-label="Navegación principal">
+        <a class="logo" href="index.html">Dibuja<span>te</span></a>
+        <div class="nav-links">
+            <a href="#catalogo">Catálogo</a>
+            <a href="mantenedor.html">Quién mantiene el sitio</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="eyebrow">MI GALERÍA DIGITAL</p>
+            <h1>Ideas que cobran vida<br>sobre el papel.</h1>
+            <p class="hero-description">
+                Una colección de dibujos para descubrir, mirar y disfrutar.
+                Elegí una categoría y explorá sus ilustraciones.
+            </p>
+            <a class="hero-button" href="#catalogo">Explorar dibujos ↓</a>
+        </div>
+        <div class="hero-decoration" aria-hidden="true">
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <span>✦</span>
+            <span>✎</span>
+        </div>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">CATÁLOGO</p>
+                <h2>¿Qué querés ver?</h2>
+            </div>
+            
+        </div>
+
+        <!-- Selector de categorías con HTML + CSS usando :target. -->
+        <div class="categoria-grid">
+            <a class="categoria-card" href="#caricaturas">
+                <div class="categoria-imagen">
+                    <img src="imagenes/Vivaldi_caricature.png" alt="Ejemplo de caricatura">
+                </div>
+                <div class="categoria-info">
+                    <span class="numero">01</span>
+                    <h3>Caricaturas</h3>
+                    <p>Personajes divertidos y expresivos.</p>
+                    <span class="ver">Ver dibujos →</span>
+                </div>
+            </a>
+
+            <a class="categoria-card" href="#paisajes">
+                <div class="categoria-imagen">
+                    <img src="imagenes/Drawing,_Landscape,_July_1865_(CH_18201019).jpg" alt="Ejemplo de paisaje">
+                </div>
+                <div class="categoria-info">
+                    <span class="numero">02</span>
+                    <h3>Paisajes</h3>
+                    <p>Lugares, naturaleza y escenarios.</p>
+                    <span class="ver">Ver dibujos →</span>
+                </div>
+            </a>
+
+            <a class="categoria-card" href="#anime">
+                <div class="categoria-imagen">
+                    <img src="imagenes/Wikipe-tan_full_length.png" alt="Ejemplo de dibujo animé">
+                </div>
+                <div class="categoria-info">
+                    <span class="numero">03</span>
+                    <h3>Animé</h3>
+                    <p>Ilustraciones inspiradas en el estilo animé.</p>
+                    <span class="ver">Ver dibujos →</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="galeria">
+            <section id="caricaturas" class="categoria-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">CATEGORÍA 01</p>
+                        <h3>Caricaturas</h3>
+                    </div>
+                    <a href="#catalogo">← Volver a categorías</a>
+                </div>
+                <div class="dibujos">
+                    <figure>
+                        <img src="imagenes/Vivaldi_caricature.png" alt="Dibujo de caricatura 1">
+                        <figcaption>Caricatura 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imagenes/Achille_Denis_caricature.jpg" alt="Dibujo de caricatura 2">
+                        <figcaption>Caricatura 2</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="paisajes" class="categoria-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">CATEGORÍA 02</p>
+                        <h3>Paisajes</h3>
+                    </div>
+                    <a href="#catalogo">← Volver a categorías</a>
+                </div>
+                <div class="dibujos">
+                    <figure>
+                        <img src="imagenes/Drawing,_Landscape,_July_1865_(CH_18201019).jpg" alt="Dibujo de paisaje 1">
+                        <figcaption>Paisaje 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imagenes/Drawing,_Mountainous_Landscape,_May_1865_(CH_18197351).jpg" alt="Dibujo de paisaje 2">
+                        <figcaption>Paisaje 2</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="anime" class="categoria-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">CATEGORÍA 03</p>
+                        <h3>Animé</h3>
+                    </div>
+                    <a href="#catalogo">← Volver a categorías</a>
+                </div>
+                <div class="dibujos">
+                    <figure>
+                        <img src="imagenes/Wikipe-tan_in_Different_Anime_Styles.png" alt="Personaje Wikipe-tan dibujado en distintos estilos animé">
+                        <figcaption>Wikipe-tan en varios estilos</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="imagenes/Wikipe-tan_full_length.png" alt="Personaje Wikipe-tan de cuerpo entero, estilo animé">
+                        <figcaption>Wikipe-tan</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">SUMÁ TU DIBUJO</p>
+                <h2>Subí un dibujo</h2>
+            </div>
+        </div>
+        <p class="hero-description">
+            Elegí un archivo PNG o JPG desde tu compu.
+        </p>
+        <form class="subida" action="#" method="post" enctype="multipart/form-data">
+            <label for="dibujo">Archivo del dibujo</label>
+            <input type="file" id="dibujo" name="dibujo" accept="image/png, image/jpeg">
+
+            <button type="submit">Subir dibujo</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div>
+        <strong>Dibujate ✦</strong>
+    </div>
+</footer>
+</body>
+</html>
